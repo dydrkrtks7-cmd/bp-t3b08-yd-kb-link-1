@@ -1,214 +1,456 @@
-
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>인문 철학 지식 저널 및 아카이브</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Noto+Sans+KR:wght@300;400;700&display=swap" rel="stylesheet">
-  <style>
-    :root {
-      --bg-color: #ffffff;
-      --text-color: #0f172a;
-      --accent-color: #2563eb;
-      --muted-color: #64748b;
-      --border-color: #e2e8f0;
-      --font-swiss: 'Inter', 'Noto Sans KR', sans-serif;
-    }
-    * { margin: 0; padding: 0; box-sizing: border-box; }
-    body {
-      background-color: var(--bg-color);
-      color: var(--text-color);
-      font-family: var(--font-swiss);
-      line-height: 1.8;
-      letter-spacing: -0.01em;
-      padding: 0 24px;
-    }
-    .container {
-      max-width: 900px;
-      margin: 0 auto;
-      padding: 60px 0;
-    }
-    header {
-      border-bottom: 1px solid var(--border-color);
-      padding-bottom: 24px;
-      margin-bottom: 40px;
-      display: flex;
-      justify-content: space-between;
-      align-items: flex-end;
-    }
-    .logo {
-      font-size: 1.25rem;
-      font-weight: 700;
-      text-transform: uppercase;
-      letter-spacing: 0.1em;
-      text-decoration: none;
-      color: var(--text-color);
-    }
-    nav { display: flex; gap: 20px; }
-    nav a {
-      color: var(--muted-color);
-      text-decoration: none;
-      font-size: 0.85rem;
-      text-transform: uppercase;
-      letter-spacing: 0.05em;
-      font-weight: 600;
-      transition: color 0.2s ease;
-    }
-    nav a:hover { color: var(--accent-color); }
-    main { padding-bottom: 60px; }
-    .meta-tag {
-      font-size: 0.75rem;
-      font-family: monospace;
-      text-transform: uppercase;
-      color: var(--accent-color);
-      font-weight: 700;
-      letter-spacing: 0.1em;
-      margin-bottom: 16px;
-      display: inline-block;
-    }
-    h1 {
-      font-size: 2.3rem;
-      font-weight: 700;
-      line-height: 1.3;
-      letter-spacing: -0.02em;
-      color: var(--text-color);
-      margin-bottom: 32px;
-    }
-    .content {
-      font-size: 1.05rem;
-      color: var(--text-color);
-      margin-bottom: 48px;
-      font-weight: 400;
-    }
-    .content p { margin-bottom: 20px; }
-    .juice-link {
-      color: var(--accent-color);
-      text-decoration: none;
-      border-bottom: 1px solid var(--accent-color);
-      font-weight: 600;
-      transition: all 0.2s ease;
-    }
-    .juice-link:hover {
-      background-color: rgba(37, 99, 235, 0.05);
-    }
-    .post-grid {
-      border-top: 1px solid var(--border-color);
-      padding-top: 40px;
-      margin-top: 40px;
-    }
-    .grid-title {
-      font-size: 0.85rem;
-      font-weight: 700;
-      text-transform: uppercase;
-      letter-spacing: 0.1em;
-      color: var(--muted-color);
-      margin-bottom: 24px;
-    }
-    .posts-list {
-      display: flex;
-      flex-direction: column;
-      gap: 16px;
-    }
-    .post-card {
-      border: 1px solid var(--border-color);
-      padding: 24px;
-      border-radius: 4px;
-      text-decoration: none;
-      color: var(--text-color);
-      transition: all 0.2s ease;
-    }
-    .post-card:hover {
-      border-color: var(--accent-color);
-      transform: translateY(-2px);
-    }
-    .post-card h3 {
-      font-size: 1.15rem;
-      font-weight: 600;
-      margin-bottom: 8px;
-    }
-    .post-card p {
-      font-size: 0.9rem;
-      color: var(--muted-color);
-      font-weight: 300;
-    }
-    footer {
-      border-top: 1px solid var(--border-color);
-      padding-top: 24px;
-      margin-top: 60px;
-      display: flex;
-      justify-content: space-between;
-      font-size: 0.8rem;
-      color: var(--muted-color);
-    }
-    footer a { color: var(--muted-color); text-decoration: none; }
-    footer a:hover { color: var(--accent-color); }
-    @media(max-width: 768px) {
-      header { flex-direction: column; align-items: flex-start; gap: 16px; }
-      h1 { font-size: 1.8rem; }
-    }
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>공덕 유흥 추천 가이드 — 도심 속 선택을 위한 비판적 조건 안내</title>
+<meta name="description" content="공덕 지역 유흥 추천은 어떻게 해야 할까? 이 가이드는 선택 기준, 이용 전 확인사항, 조건별 적합성을 비판적으로 분석합니다.">
+<meta name="keywords" content="공덕 유흥 추천, 공덕 가이드, 유흥 선택 기준, 공덕 업소, 도심 유흥">
+<link rel="canonical" href="https://gongdeok-nightlife-note.nrb-apgujeong-guide.xyz">
+<meta property="og:title" content="공덕 유흥 추천 가이드 — 도심 속 선택을 위한 비판적 조건 안내">
+<meta property="og:description" content="공덕 지역 유흥 추천은 어떻게 해야 할까? 이 가이드는 선택 기준, 이용 전 확인사항, 조건별 적합성을 비판적으로 분석합니다.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://gongdeok-nightlife-note.nrb-apgujeong-guide.xyz">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="공덕 유흥 추천 가이드 — 도심 속 선택을 위한 비판적 조건 안내">
+<meta name="twitter:description" content="공덕 지역 유흥 추천은 어떻게 해야 할까? 이 가이드는 선택 기준, 이용 전 확인사항, 조건별 적합성을 비판적으로 분석합니다.">
+<meta name="bpaas-design-system" content="editorial-apple">
+<meta name="bpaas-design-theme" content="kr-mono-chrome">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "name": "공덕 유흥 추천 가이드",
+  "description": "공덕 지역 유흥 추천은 어떻게 해야 할까? 이 가이드는 선택 기준, 이용 전 확인사항, 조건별 적합성을 비판적으로 분석합니다.",
+  "author": {
+    "@type": "Person",
+    "name": "야간정찰자"
+  },
+  "mainEntity": {
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "공덕 유흥 추천 시 가장 중요한 선택 기준은?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "공덕 유흥 선택 시 가장 중요한 것은 업소의 투명성과 리뷰의 실제성입니다. 무작정 유명한 곳보다 자신의 우선순위(가격, 분위기, 접근성)에 맞는 곳을 조사하는 것이 핵심입니다."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "공덕 유흥 이용 전 반드시 확인해야 할 사항이 있나요?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "네, 예약 가능 여부와 추가 비용 발생 여부를 사전에 확인하세요. 또한, 지도 위치와 실제 주소의 차이를 점검하고, 리뷰의 최신성을 살펴보는 것이 안전합니다."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "초보자가 공덕 유흥을 방문할 때 조언이 있다면?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "초보자는 먼저 해당 지역의 일반적인 가격대와 문화를 이해하세요. 과도한 기대보다는 기본적인 예의를 갖추고, 처음에는 소규모 업소를 방문해보는 것이 부담을 줄일 수 있습니다."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "공덕 유흥 가이드에서 다루지 않는 정보가 있다면?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "이 가이드는 개인적인 경험 공유나 비밀 리뷰를 제공하지 않습니다. 모든 정보는 공개된 데이터와 일반적인 지식에 기반하며, 실제 방문은 개인의 판단에 따라야 합니다."
+        }
+      }
+    ]
+  }
+}
+</script>
+<style>
+:root {
+  --primary: #111111;
+  --secondary: #ffffff;
+  --accent: #2563eb;
+  --font-family: Inter, system-ui, sans-serif;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: var(--font-family);
+  color: var(--primary);
+  background-color: var(--secondary);
+  line-height: 1.6;
+}
+.k-body-wlid {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 0 32px;
+}
+.x-card-f9ai {
+  position: sticky;
+  top: 0;
+  background: var(--secondary);
+  border-bottom: 1px solid var(--primary);
+  z-index: 100;
+  padding: 16px 0;
+}
+.x-card-f9ai-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.x-card-f9ai-logo {
+  font-weight: 700;
+  font-size: 1.25rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+.x-card-f9ai-menu {
+  display: flex;
+  gap: 32px;
+}
+.x-card-f9ai-link {
+  text-decoration: none;
+  color: var(--primary);
+  font-size: 0.875rem;
+  font-weight: 500;
+  transition: color 0.2s;
+}
+.x-card-f9ai-link:hover {
+  color: var(--accent);
+}
+.m-txt-ahoo {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+.m-txt-ahoo-line {
+  display: block;
+  width: 24px;
+  height: 2px;
+  background: var(--primary);
+  margin: 6px 0;
+  transition: transform 0.2s;
+}
+.q-grid-kq0d {
+  padding: 80px 0;
+  border-bottom: 1px solid var(--primary);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 48px;
+  align-items: center;
+}
+.q-grid-kq0d-content {
+  padding-right: 32px;
+}
+.q-grid-kq0d-title {
+  font-size: 3.5rem;
+  font-weight: 800;
+  line-height: 1.1;
+  margin-bottom: 24px;
+  letter-spacing: -0.02em;
+}
+.q-grid-kq0d-accent {
+  color: var(--accent);
+  display: block;
+  font-size: 1rem;
+  font-weight: 600;
+  margin-top: 16px;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+.q-grid-kq0d-visual {
+  border: 2px solid var(--primary);
+  padding: 32px;
+  position: relative;
+}
+.q-grid-kq0d-visual::before {
+  content: '';
+  position: absolute;
+  top: -16px;
+  right: -16px;
+  width: 100%;
+  height: 100%;
+  border: 1px solid var(--accent);
+  z-index: -1;
+}
+.q-side-ish3 {
+  padding: 80px 0;
+  border-bottom: 1px solid var(--primary);
+}
+.q-side-ish3-title {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 48px;
+  display: flex;
+  align-items: baseline;
+  gap: 16px;
+}
+.q-side-ish3-title::before {
+  content: '';
+  width: 32px;
+  height: 2px;
+  background: var(--accent);
+  display: inline-block;
+}
+.q-top-2gmj-2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 32px;
+}
+.q-top-2gmj-3 {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 32px;
+}
+.r-item-2j49 {
+  border: 1px solid var(--primary);
+  padding: 24px;
+}
+.r-item-2j49-title {
+  font-size: 1.125rem;
+  font-weight: 600;
+  margin-bottom: 12px;
+}
+.r-item-2j49-text {
+  font-size: 0.875rem;
+  color: #555;
+}
+.n-top-ip79 {
+  list-style: none;
+  display: grid;
+  gap: 16px;
+}
+.n-top-ip79-item {
+  padding-left: 24px;
+  position: relative;
+  font-size: 0.875rem;
+}
+.n-top-ip79-item::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 8px;
+  width: 8px;
+  height: 8px;
+  border: 2px solid var(--accent);
+}
+.r-btn-zjmh {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.875rem;
+}
+.r-btn-zjmh th, .r-btn-zjmh td {
+  border: 1px solid var(--primary);
+  padding: 12px;
+  text-align: left;
+}
+.r-btn-zjmh th {
+  background: var(--primary);
+  color: var(--secondary);
+  font-weight: 600;
+}
+.v-wrap-0pse {
+  border-left: 4px solid var(--accent);
+  padding: 16px 32px;
+  font-style: italic;
+  font-size: 1.125rem;
+  line-height: 1.4;
+}
+.m-side-gabe-item {
+  margin-bottom: 32px;
+}
+.m-side-gabe-question {
+  font-size: 1.125rem;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+.m-side-gabe-answer {
+  font-size: 0.875rem;
+  color: #555;
+}
+.v-body-qr8f {
+  padding: 48px 0;
+  border-top: 1px solid var(--primary);
+  display: flex;
+  gap: 32px;
+  align-items: center;
+}
+.v-body-qr8f-name {
+  font-weight: 700;
+  font-size: 1.25rem;
+}
+.v-body-qr8f-bio {
+  font-size: 0.875rem;
+  color: #555;
+}
+.t-side-1k2a {
+  padding: 32px 0;
+  border-top: 1px solid var(--primary);
+  text-align: center;
+  font-size: 0.75rem;
+  color: #777;
+}
+@media (max-width: 768px) {
+  .x-card-f9ai-menu {
+    display: none;
+  }
+  .m-txt-ahoo {
+    display: block;
+  }
+  .q-grid-kq0d {
+    grid-template-columns: 1fr;
+  }
+  .q-grid-kq0d-content {
+    padding-right: 0;
+  }
+  .q-top-2gmj-2, .q-top-2gmj-3 {
+    grid-template-columns: 1fr;
+  }
+  .q-grid-kq0d-title {
+    font-size: 2.5rem;
+  }
+}
+</style>
 </head>
 <body>
-  <div class="container">
-    <header>
-      <a href="/" class="logo">KR.GEEK</a>
-      <nav><a href="index.html">HOME</a> | <a href="sitemap.xml">SITEMAP</a></nav>
-    </header>
-    <main>
-      <div class="meta-tag">// SWISS ACCENTED GRID SYSTEM</div>
-      <h1>인문 철학 지식 저널 및 아카이브</h1>
-      <div class="content">
-        환영합니다. 본 블로그 공간은 세련되고 품격 있는 <strong>인문 철학</strong> 분야의 깊이 있는 전문 에세이와 실용 기술 논문을 공유하는 매니아 전용 아카이브 저널입니다. 아래의 최근 기사 목록을 통해 새로운 지식의 지평을 넓혀 보시기 바랍니다.
-      </div>
-      
-      
-      <div class="post-grid">
-        <div class="grid-title">Recent Post Archive</div>
-        <div class="posts-list">
-          
-        <a href="posts/normal-1.html" class="post-card">
-          <h3>바뤼흐 스피노자의 에티카(Ethica) 속 동물의 코나투스(Conatus)와 비주류 정서론 분석</h3>
-          <p>네덜란드의 고독한 렌즈 가공 철학자 스피노자의 주저 에티카에서 피력된 코나투스(자신의 존재를 유지하려는 영속적 본성 노력) 개념을 동물에게 투영해 볼 때, 인간 중심적 관점에서 해...</p>
-        </a>
-      
-
-        <a href="posts/normal-2.html" class="post-card">
-          <h3>질 들뢰즈의 리좀(Rhizome) 공간 역학으로 조망한 아날로그 골목길의 인문 구조학</h3>
-          <p>시작과 끝이 규정되지 않고 끊임없이 파편적으로 연결되며 영토를 가로지르는 들뢰즈의 리좀 모델을 격자형 대도시가 아닌 오랜 유기적 골목길의 공간 미학에 적용해 볼 때, 규칙적 구획이...</p>
-        </a>
-      
-
-        <a href="posts/normal-3.html" class="post-card">
-          <h3>중세 스콜라 철학의 영적 통신 논쟁: 천사들의 비물질적 메시지 전달 속도와 주파수</h3>
-          <p>중세 대철학자 토마스 아퀴나스가 주창했던 천사들의 언어(Speech of Angels) 형이상학은 물리적 육체와 공간의 장벽이 없는 순수한 지성적 존재들이 어떻게 공간을 왜곡하고 ...</p>
-        </a>
-      
-
-        <a href="posts/juice-1.html" class="post-card">
-          <h3>지적 인문 철학 독자들을 위해 준비한 마포 셔츠룸 통합 안내 리포트</h3>
-          <p>신과 만물의 필연적인 자기 보존 욕구와 중심을 인정하지 않는 무정형의 리좀적 골목길 사색을 거치며 시대의 심연을 정밀하게 성찰해 나가는 깊이 있는 지성인분들이라면, 거칠고 차가운 ...</p>
-        </a>
-      
-
-        <a href="posts/juice-2.html" class="post-card">
-          <h3>지적 인문 철학 독자들을 위해 준비한 마포 셔츠룸 통합 안내 리포트</h3>
-          <p>신과 만물의 필연적인 자기 보존 욕구와 중심을 인정하지 않는 무정형의 리좀적 골목길 사색을 거치며 시대의 심연을 정밀하게 성찰해 나가는 깊이 있는 지성인분들이라면, 거칠고 차가운 ...</p>
-        </a>
-      
+<nav class="x-card-f9ai">
+  <div class="k-body-wlid x-card-f9ai-inner">
+    <div class="x-card-f9ai-logo">공덕 유흥 추천</div>
+    <div class="x-card-f9ai-menu">
+      <a href="#criteria" class="x-card-f9ai-link">선택 기준</a>
+      <a href="#confirm" class="x-card-f9ai-link">이용 전 확인사항</a>
+      <a href="#suitability" class="x-card-f9ai-link">조건별 적합성</a>
+      <a href="#faq" class="x-card-f9ai-link">FAQ</a>
+    </div>
+    <button class="m-txt-ahoo" aria-label="메뉴 열기">
+      <span class="m-txt-ahoo-line"></span>
+      <span class="m-txt-ahoo-line"></span>
+      <span class="m-txt-ahoo-line"></span>
+    </button>
+  </div>
+</nav>
+<main>
+  <section class="q-grid-kq0d">
+    <div class="k-body-wlid q-grid-kq0d-content">
+      <h1 class="q-grid-kq0d-title">공덕 유흥 추천 가이드</h1>
+      <p class="q-grid-kq0d-accent">도심 속 선택을 위한 비판적 조건 안내</p>
+    </div>
+    <div class="k-body-wlid q-grid-kq0d-visual">
+      <div style="font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.2em; margin-bottom: 16px;">GONGDEOK · DISTRICT · GUIDE</div>
+      <div style="font-size: 1.5rem; font-weight: 700; line-height: 1.2;">어디에 가야 할지 고민이라면,<br>이 문서를 읽으세요.</div>
+    </div>
+  </section>
+  <section id="criteria" class="q-side-ish3">
+    <div class="k-body-wlid">
+      <h2 class="q-side-ish3-title">선택 기준</h2>
+      <div class="q-top-2gmj-3">
+        <div class="r-item-2j49">
+          <div class="r-item-2j49-title">가격 투명성</div>
+          <div class="r-item-2j49-text">기본 요금과 추가 비용의 명시 여부를 확인하세요. 숨겨진 비용은 신뢰를 깨뜨립니다.</div>
+        </div>
+        <div class="r-item-2j49">
+          <div class="r-item-2j49-title">리뷰의 진정성</div>
+          <div class="r-item-2j49-text">최신 리뷰와 패턴을 분석하세요. 과도하게 긍정적이거나 반복적인 리뷰는 의심할 여지가 있습니다.</div>
+        </div>
+        <div class="r-item-2j49">
+          <div class="r-item-2j49-title">접근성과 위치</div>
+          <div class="r-item-2j49-text">실제 주소와 지도 위치의 차이를 점검하세요. 교통 편의성도 중요한 기준입니다.</div>
         </div>
       </div>
-    </main>
-    <footer>
-      <div>&copy; 2026 KR.GEEK. ALL RIGHTS RESERVED.</div>
-      <div>
-        <a href="sitemap.xml">SITEMAP</a> | 
-        <a href="#">PRIVACY</a> | 
-        <a href="#">DISCLAIMER</a>
+    </div>
+  </section>
+  <section id="confirm" class="q-side-ish3">
+    <div class="k-body-wlid">
+      <h2 class="q-side-ish3-title">이용 전 확인사항</h2>
+      <ul class="n-top-ip79">
+        <li class="n-top-ip79-item">예약 가능 여부와 시간대를 사전에 확인하세요.</li>
+        <li class="n-top-ip79-item">추가 인원이나 서비스에 따른 비용 변동을 문의하세요.</li>
+        <li class="n-top-ip79-item">해당 지역의 일반적인 가격대를 조사해 비교하세요.</li>
+        <li class="n-top-ip79-item">리뷰에서 언급된 주의사항을 꼼꼼히 살펴보세요.</li>
+        <li class="n-top-ip79-item">개인적인 한계와 선호를 먼저 설정하세요.</li>
+      </ul>
+    </div>
+  </section>
+  <section id="suitability" class="q-side-ish3">
+    <div class="k-body-wlid">
+      <h2 class="q-side-ish3-title">조건별 적합성</h2>
+      <table class="r-btn-zjmh">
+        <thead>
+          <tr>
+            <th>조건</th>
+            <th>적합한 업소 유형</th>
+            <th>주의점</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>예산 제한</td>
+            <td>가격 명시가 명확한 소규모 업소</td>
+            <td>할인이나 이벤트의 조건을 확인하세요.</td>
+          </tr>
+          <tr>
+            <td>편의성 중시</td>
+            <td>주요 역과 가까운 업소</td>
+            <td>실제 도보 거리를 확인하세요.</td>
+          </tr>
+          <tr>
+            <td>최신 트렌드</td>
+            <td>리뷰가 활발한 신규 업소</td>
+            <td>운영 초기의 불안정함을 감안하세요.</td>
+          </tr>
+        </tbody>
+      </table>
+      <div class="v-wrap-0pse" style="margin-top: 48px;">
+        "공덕 유흥 추천은 단순한 목록이 아니라, 개인의 조건에 맞는 판단의 과정입니다."
       </div>
-    </footer>
+    </div>
+  </section>
+  <section id="faq" class="q-side-ish3">
+    <div class="k-body-wlid">
+      <h2 class="q-side-ish3-title">자주 묻는 질문</h2>
+      <div class="q-top-2gmj-2">
+        <div class="m-side-gabe-item">
+          <div class="m-side-gabe-question">공덕 유흥 추천 시 가장 중요한 선택 기준은?</div>
+          <div class="m-side-gabe-answer">공덕 유흥 선택 시 가장 중요한 것은 업소의 투명성과 리뷰의 실제성입니다. 무작정 유명한 곳보다 자신의 우선순위(가격, 분위기, 접근성)에 맞는 곳을 조사하는 것이 핵심입니다.</div>
+        </div>
+        <div class="m-side-gabe-item">
+          <div class="m-side-gabe-question">공덕 유흥 이용 전 반드시 확인해야 할 사항이 있나요?</div>
+          <div class="m-side-gabe-answer">네, 예약 가능 여부와 추가 비용 발생 여부를 사전에 확인하세요. 또한, 지도 위치와 실제 주소의 차이를 점검하고, 리뷰의 최신성을 살펴보는 것이 안전합니다.</div>
+        </div>
+        <div class="m-side-gabe-item">
+          <div class="m-side-gabe-question">초보자가 공덕 유흥을 방문할 때 조언이 있다면?</div>
+          <div class="m-side-gabe-answer">초보자는 먼저 해당 지역의 일반적인 가격대와 문화를 이해하세요. 과도한 기대보다는 기본적인 예의를 갖추고, 처음에는 소규모 업소를 방문해보는 것이 부담을 줄일 수 있습니다.</div>
+        </div>
+        <div class="m-side-gabe-item">
+          <div class="m-side-gabe-question">공덕 유흥 가이드에서 다루지 않는 정보가 있다면?</div>
+          <div class="m-side-gabe-answer">이 가이드는 개인적인 경험 공유나 비밀 리뷰를 제공하지 않습니다. 모든 정보는 공개된 데이터와 일반적인 지식에 기반하며, 실제 방문은 개인의 판단에 따라야 합니다.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+<footer>
+  <div class="k-body-wlid">
+    <div class="v-body-qr8f">
+      <div>
+        <div class="v-body-qr8f-name">야간정찰자</div>
+        <div class="v-body-qr8f-bio">5년간 공덕 지역 정보를 정리해온 로컬 가이드입니다. 현실적인 조언과 비판적 시각을 전달합니다.</div>
+      </div>
+    </div>
+    <div class="t-side-1k2a">
+      © 2023 공덕 유흥 추천 가이드. 모든 권리 보유.
+    </div>
   </div>
+</footer>
+<script>
+document.querySelector('.m-txt-ahoo').addEventListener('click', function() {
+  const menu = document.querySelector('.x-card-f9ai-menu');
+  menu.style.display = menu.style.display === 'flex' ? 'none' : 'flex';
+});
+</script>
 </body>
 </html>
