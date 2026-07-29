@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://gongdeok-nightlife-note.nrb-apgujeong-guide.xyz/sitemap.xml
